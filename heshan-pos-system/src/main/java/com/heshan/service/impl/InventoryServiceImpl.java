@@ -1,6 +1,7 @@
 package com.heshan.service.impl;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Service;
 
@@ -49,27 +50,35 @@ public class InventoryServiceImpl implements InventoryService {
    }
 
    @Override
-   public void deleteInventory(Long id) {
-      // TODO Auto-generated method stub
-      throw new UnsupportedOperationException("Unimplemented method 'deleteInventory'");
+   public void deleteInventory(Long id) throws Exception {
+      
+      Inventory inventory = inventoryRepository.findById(id)
+            .orElseThrow(() -> new Exception("Inventory not found.."));
+
+      inventoryRepository.delete(inventory);
    }
 
    @Override
-   public InventoryDTO getInventoryById(Long id) {
-      // TODO Auto-generated method stub
-      throw new UnsupportedOperationException("Unimplemented method 'getInventoryById'");
+   public InventoryDTO getInventoryById(Long id) throws Exception {
+      
+      Inventory inventory = inventoryRepository.findById(id)
+            .orElseThrow(() -> new Exception("Inventory not found.."));
+      
+      return InventoryMapper.toDTO(inventory);
    }
 
    @Override
    public InventoryDTO getInventoryByProductIdAndBranchId(Long productId, Long branchId) {
-      // TODO Auto-generated method stub
-      throw new UnsupportedOperationException("Unimplemented method 'getInventoryByProductIdAndBranchId'");
+      
+      Inventory inventory = inventoryRepository.findByProductIdAndBranchId(productId, branchId);
+
+      return InventoryMapper.toDTO(inventory);
    }
 
    @Override
    public List<InventoryDTO> getAllInventoryByBranchId(Long branchId) {
-      // TODO Auto-generated method stub
-      throw new UnsupportedOperationException("Unimplemented method 'getAllInventoryByBranchId'");
+      List<Inventory> inventories = inventoryRepository.findByBranchId(branchId);
+      return inventories.stream().map(InventoryMapper::toDTO).collect(Collectors.toList());
    }
 
 }
