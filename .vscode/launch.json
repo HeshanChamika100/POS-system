@@ -1,0 +1,14 @@
+{
+   "configurations": [
+      {
+         "type": "java",
+         "name": "Spring Boot-HeshanPosSystemApplication<heshan-pos-system>",
+         "request": "launch",
+         "cwd": "${workspaceFolder}",
+         "mainClass": "com.heshan.HeshanPosSystemApplication",
+         "projectName": "heshan-pos-system",
+         "args": "",
+         "envFile": "${workspaceFolder}/.env"
+      }
+   ]
+}
