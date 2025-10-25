@@ -11,9 +11,9 @@ const orders = [
 
 const PurchaseHistory = () => {
   return (
-    <div className="p-4 border-t h-full">
-      <Card className="border-0 shadow-lg">
-        <CardHeader className="pb-3 border-b border-gray-200 bg-white rounded-t-lg">
+    <div className="p-4 h-full">
+      <Card className="shadow-lg">
+        <CardHeader className="pb-3 border-gray-200 bg-white">
           <CardTitle className="text-2xl font-bold text-gray-900">
             Purchase History
           </CardTitle>
