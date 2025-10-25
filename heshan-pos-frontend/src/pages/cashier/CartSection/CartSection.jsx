@@ -31,8 +31,10 @@ const CartSection = () => {
       {/* Cart Items */}
       <div className='flex-1 overflow-y-auto px-4 py-4 space-y-3'>
         {cartItems.length === 0 ? (
-          <div className='flex items-center justify-center h-full text-gray-400'>
-            <p>No items in cart</p>
+          <div className='flex flex-col items-center justify-center h-full text-gray-400 gap-3'>
+            <ShoppingCart size={100} />
+            <p className='text-lg font-medium'>Cart is Empty</p>
+            <p>Add products to start an order</p>
           </div>
         ) : (
           cartItems.map((item) => (

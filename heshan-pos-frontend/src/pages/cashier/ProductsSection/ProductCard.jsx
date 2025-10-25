@@ -10,11 +10,11 @@ const ProductCard = ({ product }) => {
   return (
     <Card
       onClick={() => addToCart(product)}
-      className="cursor-pointer hover:shadow-xl transition-all duration-300 transform hover:scale-105 overflow-hidden border border-gray-200 rounded-xl"
+      className="cursor-pointer hover:shadow-xl transition-all duration-300 transform hover:scale-105 overflow-hidden border border-gray-200 rounded-xl p-0"
     >
       <CardContent className="p-0">
         {/* Product Image */}
-        <div className="relative overflow-hidden bg-gray-100 aspect-square">
+        <div className="relative overflow-hidden bg-gray-100 aspect-square w-full">
           <img
             className="h-full w-full object-cover transition-transform duration-300 hover:scale-110"
             src={product.image}
