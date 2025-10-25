@@ -50,28 +50,28 @@ const CartSection = () => {
               {/* Quantity Controls */}
               <div className='flex items-center justify-between mt-3'>
                 <div className='flex items-center space-x-2'>
-                  <button
+                  <Button
                     onClick={() => updateQuantity(item.id, item.quantity - 1)}
                     className='bg-white border border-gray-300 p-1 rounded hover:bg-gray-100'
                   >
                     <Minus size={14} className='text-gray-600' />
-                  </button>
+                  </Button>
                   <span className='w-6 text-center text-sm font-semibold'>{item.quantity}</span>
-                  <button
+                  <Button
                     onClick={() => updateQuantity(item.id, item.quantity + 1)}
                     className='bg-white border border-gray-300 p-1 rounded hover:bg-gray-100'
                   >
                     <Plus size={14} className='text-gray-600' />
-                  </button>
+                  </Button>
                 </div>
                 <div className='flex items-center space-x-2'>
                   <span className='text-xs font-medium text-gray-600'>${item.price}</span>
-                  <button
+                  <Button variant="ghost"
                     onClick={() => removeFromCart(item.id)}
                     className='text-red-500 hover:text-red-700 p-1'
                   >
                     <Trash2 size={14} />
-                  </button>
+                  </Button>
                 </div>
               </div>
             </div>
