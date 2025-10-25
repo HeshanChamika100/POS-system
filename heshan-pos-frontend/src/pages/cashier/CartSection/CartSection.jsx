@@ -1,6 +1,7 @@
 import React from 'react';
-import { Trash2, Plus, Minus, ShoppingCart } from 'lucide-react';
+import { Trash2, Plus, Minus, ShoppingCart, Pause } from 'lucide-react';
 import { usePOS } from '../../../context/usePOS';
+import { Button } from '@/components/ui/button';
 
 const CartSection = () => {
   const { cartItems, updateQuantity, removeFromCart, subtotal, tax, total } = usePOS();
@@ -15,12 +16,14 @@ const CartSection = () => {
             <h2 className='text-lg font-semibold text-gray-800'>Cart ({cartItems.length}) item</h2>
           </div>
           <div className='flex space-x-2'>
-            <button className='px-3 py-1 text-sm bg-gray-100 hover:bg-gray-200 rounded border border-gray-300'>
+            <Button variant="outline">
+              <Pause />
               Hold
-            </button>
-            <button className='px-3 py-1 text-sm bg-gray-100 hover:bg-gray-200 rounded border border-gray-300'>
+            </Button>
+            <Button variant="outline">
+              <Trash2 />
               Clear
-            </button>
+            </Button>
           </div>
         </div>
       </div>
