@@ -33,6 +33,124 @@ const products = [
     sellingPrice: 100,
     category: "Category A",
   },
+  {
+    id: 4,
+    image:
+      "https://cdn.pixabay.com/photo/2023/05/06/01/33/t-shirt-7973394_1280.jpg",
+    name: "Product Name",
+    sku: "SKU12345",
+    sellingPrice: 100,
+    category: "Category A",
+  },
+  {
+    id: 5,
+    image:
+      "https://cdn.pixabay.com/photo/2023/05/06/01/33/t-shirt-7973394_1280.jpg",
+    name: "Product Name",
+    sku: "SKU12345",
+    sellingPrice: 100,
+    category: "Category A",
+  },
+  {
+    id: 6,
+    image:
+      "https://cdn.pixabay.com/photo/2023/05/06/01/33/t-shirt-7973394_1280.jpg",
+    name: "Product Name",
+    sku: "SKU12345",
+    sellingPrice: 100,
+    category: "Category A",
+  },
+  {
+    id: 7,
+    image:
+      "https://cdn.pixabay.com/photo/2023/05/06/01/33/t-shirt-7973394_1280.jpg",
+    name: "Product Name",
+    sku: "SKU12345",
+    sellingPrice: 100,
+    category: "Category A",
+  },
+  {
+    id: 3,
+    image:
+      "https://cdn.pixabay.com/photo/2023/05/06/01/33/t-shirt-7973394_1280.jpg",
+    name: "Product Name",
+    sku: "SKU12345",
+    sellingPrice: 100,
+    category: "Category A",
+  },
+  {
+    id: 3,
+    image:
+      "https://cdn.pixabay.com/photo/2023/05/06/01/33/t-shirt-7973394_1280.jpg",
+    name: "Product Name",
+    sku: "SKU12345",
+    sellingPrice: 100,
+    category: "Category A",
+  },
+  {
+    id: 3,
+    image:
+      "https://cdn.pixabay.com/photo/2023/05/06/01/33/t-shirt-7973394_1280.jpg",
+    name: "Product Name",
+    sku: "SKU12345",
+    sellingPrice: 100,
+    category: "Category A",
+  },
+  {
+    id: 3,
+    image:
+      "https://cdn.pixabay.com/photo/2023/05/06/01/33/t-shirt-7973394_1280.jpg",
+    name: "Product Name",
+    sku: "SKU12345",
+    sellingPrice: 100,
+    category: "Category A",
+  },
+  {
+    id: 3,
+    image:
+      "https://cdn.pixabay.com/photo/2023/05/06/01/33/t-shirt-7973394_1280.jpg",
+    name: "Product Name",
+    sku: "SKU12345",
+    sellingPrice: 100,
+    category: "Category A",
+  },
+  {
+    id: 3,
+    image:
+      "https://cdn.pixabay.com/photo/2023/05/06/01/33/t-shirt-7973394_1280.jpg",
+    name: "Product Name",
+    sku: "SKU12345",
+    sellingPrice: 100,
+    category: "Category A",
+  },
+  {
+    id: 3,
+    image:
+      "https://cdn.pixabay.com/photo/2023/05/06/01/33/t-shirt-7973394_1280.jpg",
+    name: "Product Name",
+    sku: "SKU12345",
+    sellingPrice: 100,
+    category: "Category A",
+  },
+  {
+    id: 3,
+    image:
+      "https://cdn.pixabay.com/photo/2023/05/06/01/33/t-shirt-7973394_1280.jpg",
+    name: "Product Name",
+    sku: "SKU12345",
+    sellingPrice: 100,
+    category: "Category A",
+  },
+  {
+    id: 3,
+    image:
+      "https://cdn.pixabay.com/photo/2023/05/06/01/33/t-shirt-7973394_1280.jpg",
+    name: "Product Name",
+    sku: "SKU12345",
+    sellingPrice: 100,
+    category: "Category A",
+  },
+
 ];
 
 const ProductsSection = () => {
@@ -49,8 +167,8 @@ const ProductsSection = () => {
   );
 
   return (
-    <div className="w-1/3 flex flex-col bg-white border-r border-gray-200">
-      <div className="p-4 border-b border-gray-200 bg-gray-50">
+    <div className="w-1/3 flex flex-col bg-white border-r border-gray-200 h-full">
+      <div className="p-4 border-b border-gray-200 bg-gray-50 shrink-0">
         <div>
           <Input
             className={"py-2 text-sm"}
@@ -70,10 +188,12 @@ const ProductsSection = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-3 gap-2 p-3 overflow-y-auto">
-        {filteredProducts.map((product, index) => (
-          <ProductCard product={product} key={index} />
-        ))}
+      <div className="flex-1 overflow-y-auto overflow-x-hidden">
+        <div className="grid grid-cols-3 gap-2 p-3">
+          {filteredProducts.map((product, index) => (
+            <ProductCard product={product} key={index} />
+          ))}
+        </div>
       </div>
     </div>
   );

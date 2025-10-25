@@ -40,9 +40,9 @@ const CustomerPaymentSection = () => {
   const finalAmount = total - discountAmount;
 
   return (
-    <div className="w-80 flex flex-col bg-white border-l border-gray-200">
+    <div className="w-80 flex flex-col bg-white border-l border-gray-200 h-full">
       {/* Header */}
-      <div className="px-6 py-3 border-gray-200">
+      <div className="px-6 py-3 border-b border-gray-200 bg-gray-50 shrink-0">
         <div className="flex items-center space-x-2">
           <User size={18} />
           <h3 className="text-lg font-semibold text-gray-800">Customer</h3>
@@ -107,7 +107,7 @@ const CustomerPaymentSection = () => {
       </div>
 
       {/* Footer - Total and Buttons */}
-      <div className="border-t border-gray-200 px-6 py-4 bg-gray-50">
+      <div className="border-t border-gray-200 px-6 py-4 bg-gray-50 shrink-0">
         {/* Total Display */}
         <div className="mb-4 text-center">
           <p className="text-xs text-gray-600 mb-1">Total Amount</p>
